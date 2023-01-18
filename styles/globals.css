@@ -2,25 +2,180 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: rgb(24,24,24)
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::-webkit-scrollbar {
+  width: 5px;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 40px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.canvas-container {
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh
+}
+
+.universe {
+  z-index: 2;
+  width: 50%;
+  height: 50%;
+  background-color: black;  
+  border-radius: 20px;
+  border-style: solid;
+  border-color: green;
+  filter: drop-shadow(10px 10px 4px black);
+}
+
+.title {
+  z-index: 4;
+  color: white;
+  text-align: center;
+  font-family: Verdana;
+  font-size: 40px;
+  filter: drop-shadow(10px 10px 4px black);
+}
+
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgb(24,24,24);
+  filter: drop-shadow(2px 2px 4px #98FB98);
+}
+
+.nav-items {
+  display: flex;
+  gap: 2rem
+}
+
+a:hover {
+  filter: drop-shadow(0px 0px 4px green);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.nav-title {
+  color: white;
+  text-align: center;
+  font-family: Verdana;
+  cursor: pointer
+}
+
+.popup {
+  padding: 5px;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 50%;
+  height: 50%;
+  background-color: black;
+  background-image: radial-gradient(
+    rgba(0, 150, 0, 0.75), black 120%
+  );
+  z-index: 4;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: green;
+  filter: drop-shadow(10px 10px 4px black);
+  overflow-y: scroll;
+}
+
+.close-popup {
+  text-align: right;
+  position: -webkit-sticky;
+  top: 0;
+  position: sticky;
+  cursor: pointer;
+  color: red;
+  margin-right: 6px
+}
+
+.info-text {
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+
+.info-title {
+  font: 2.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;
+  color: white;
+  font-weight: bold;
+}
+
+.about-icons {
+  font-size: 50px
+}
+
+.skills-text {
+  color: white;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;  
+}
+
+.project-container {
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  border-width: 2px
+}
+
+.project-description {
+  color: white;
+  font: 0.8rem Inconsolata, monospace;
+  text-shadow: 0 0 5px #C8C8C8;  
+}
+
+.education-container {
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  border-width: 2px;
+  text-align: center  
+}
+
+.footer-container {
+  position: relative;
+  background-color: rgb(24,24,24);  
+  z-index: 2;  
+  padding: 2px;
+  text-align: center
+}
+
+@media only screen and (max-width: 700px) {
+  .universe {
+    width: 90%;
   }
-  body {
-    color: white;
-    background: black;
+  .title {
+    font-size: 30px
+  }
+  .popup {
+    left: 4%;
+    width: 90%
+  }
+  .about-icons {
+    font-size: 40px;
+  }
+  .skills-text {
+    font: 1.0rem Inconsolata, monospace;    
+  }
+  nav {
+    position: relative
   }
 }
