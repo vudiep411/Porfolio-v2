@@ -43,6 +43,7 @@ export default function Home() {
         <div>
           <h1 className="title">Welcome to my simulated Profile.</h1>
           <h1 className="title">I am Vu, your host</h1>
+          <p className='wait'>(Please wait 10 seconds for the universe to be simulated)</p>
         </div>
         <div className="universe">
           <Canvas>
