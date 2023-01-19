@@ -1,9 +1,12 @@
+import Link from 'next/link';
 import React from 'react'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-const Navbar = ({ handleAboutModal }) => {
+const Navbar = () => {
   return (
     <nav>
-        <p className='nav-title' onClick={handleAboutModal}><b>Vu&apos; Profile</b></p>
+      <Link href="/" style={{ textDecoration: 'none' }}>
+        <p className='nav-title' href='/'><b>Vu&apos; Profile</b></p>
+      </Link>
         <div className='nav-items'>
             <a href="https://github.com/vudiep411" target='_blank' rel="noreferrer"><AiFillGithub size='2.5rem' color='white'/></a>
             <a href="#"><AiFillInstagram size='2.5rem' color='white'/></a>

@@ -12,6 +12,7 @@ import About from "../components/About"
 import Projects from "../components/Projects"
 import Education from "../components/Education"
 import Footer from "../components/Footer"
+import { Button } from "@mui/material"
 
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar handleAboutModal={handleAboutModal}/>
+      <Navbar/>
       {isOpen && <About handleAboutModal={handleAboutModal}/>}
       {isOpenProject && <Projects handleProjectModal={handleProjectModal}/>}
       {isOpenEducation && <Education handleEducationModal={handleEducationModal}/>}
@@ -69,6 +70,9 @@ export default function Home() {
             <ThreeDText text="About" position={[-0.5, 0.7, 0]}/>
             <ThreeDText text="Education" position={[1.2, 0.7, 0]}/>
           </Canvas>
+          <div style={{display: 'flex', justifyContent: 'center', paddingTop: '15px', width: 'auto'}}>
+            <Button variant="contained" color="success" style={{padding: '15px'}} href='/blog'><b>My Blogs</b></Button>
+          </div>
         </div>
       </div>
       <Footer/>

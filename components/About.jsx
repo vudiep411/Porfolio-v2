@@ -14,7 +14,7 @@ const About = ({ handleAboutModal }) => {
             </p><br/>
             <h1 className='info-title'><AiOutlineFileSearch/>&nbsp;Experience</h1>
             <p className='info-text'>I have experience working on full-stack using various different technology in this universe. Visit my github profile for more information on my projects</p><br/>
-            <h1 className='info-title'><AiOutlineProject/>&nbsp;Skill</h1>
+            <h1 className='info-title'><AiOutlineProject/>&nbsp;Skill</h1><br/>
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <div style={{marginLeft: '15px'}}>
                     <FaReact className='about-icons' style={{color: 'pink'}}/>
