@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Stars } from "@react-three/drei"
 import Earth from "../components/Earth"
 import Mars from "../components/Mars"
-import MatrixBackground from "../components/Matrix"
 import Jupiter from "../components/Jupiter"
 import ThreeDText from "../components/text3D/ThreeDText"
 import Navbar from "../components/Navbar"
@@ -13,6 +12,7 @@ import Projects from "../components/Projects"
 import Education from "../components/Education"
 import Footer from "../components/Footer"
 import Link from "next/link"
+import ParticleBG from "../components/ParticleBG"
 
 
 export default function Home() {
@@ -39,7 +39,8 @@ export default function Home() {
       {isOpen && <About handleAboutModal={handleAboutModal}/>}
       {isOpenProject && <Projects handleProjectModal={handleProjectModal}/>}
       {isOpenEducation && <Education handleEducationModal={handleEducationModal}/>}
-      {!isTabletOrMobile && <MatrixBackground/>}
+      {/* {!isTabletOrMobile && <MatrixBackground/>} */}
+      <ParticleBG/>
       <div className="canvas-container">
         <div>
           <h1 className="title">Welcome to my simulated Profile.</h1>
